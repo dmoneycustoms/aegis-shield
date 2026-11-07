@@ -1,0 +1,26 @@
+{
+  "updated": "2026-11-03",
+  "alerts": [
+    {
+      "id": "g1",
+      "title": "Mobile stealer wave — SMS OTP",
+      "severity": "high",
+      "region": "global",
+      "body": "Sideloaded banking APKs requesting SMS + Accessibility remain active. Deep-scan Downloads and disable unknown sources when idle."
+    },
+    {
+      "id": "g2",
+      "title": "Fake system update APKs",
+      "severity": "high",
+      "region": "global",
+      "body": "Droppers named update.apk / system_update.apk with REQUEST_INSTALL_PACKAGES. Quarantine and verify publisher."
+    },
+    {
+      "id": "g3",
+      "title": "Definition channel live",
+      "severity": "low",
+      "region": "global",
+      "body": "AEGIS pulls definitions/latest.json from this repo. Push new patterns here for fleet update."
+    }
+  ]
+}

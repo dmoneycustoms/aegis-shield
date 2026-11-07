@@ -1,0 +1,467 @@
+{
+  "version": "2026.11.06-nscb-r2",
+  "channel": "aegis-shield/main/definitions",
+  "min_app": "2.3.0",
+  "signatures": [
+    {
+      "id": "rem-stealer-sms-otp",
+      "name": "OTP stealer SMS",
+      "family": "stealer",
+      "severity": "high",
+      "pattern": "your verification code",
+      "detail": "OTP harvest lure",
+      "weight": 1.2
+    },
+    {
+      "id": "rem-stealer-bank",
+      "name": "Banking lure",
+      "family": "phishing",
+      "severity": "high",
+      "pattern": "confirm your bank account",
+      "detail": "Banking phish",
+      "weight": 1.3
+    },
+    {
+      "id": "rem-stealer-wallet",
+      "name": "Crypto wallet seed",
+      "family": "phishing",
+      "severity": "critical",
+      "pattern": "enter your 12-word",
+      "detail": "Seed phrase harvest",
+      "weight": 1.5
+    },
+    {
+      "id": "rem-stealer-wallet2",
+      "name": "Seed phrase ask",
+      "family": "phishing",
+      "severity": "critical",
+      "pattern": "12 word recovery",
+      "detail": "Seed phrase harvest",
+      "weight": 1.5
+    },
+    {
+      "id": "rem-phish-dhl",
+      "name": "Parcel phish",
+      "family": "phishing",
+      "severity": "medium",
+      "pattern": "package held at customs",
+      "detail": "Delivery scam",
+      "weight": 1.0
+    },
+    {
+      "id": "rem-phish-irs",
+      "name": "Tax phish",
+      "family": "phishing",
+      "severity": "high",
+      "pattern": "unpaid tax refund",
+      "detail": "Tax authority lure",
+      "weight": 1.2
+    },
+    {
+      "id": "rem-phish-netflix",
+      "name": "Sub phish",
+      "family": "phishing",
+      "severity": "medium",
+      "pattern": "netflix payment failed",
+      "detail": "Brand phish",
+      "weight": 1.0
+    },
+    {
+      "id": "rem-phish-paypal",
+      "name": "PayPal phish",
+      "family": "phishing",
+      "severity": "high",
+      "pattern": "paypal account limited",
+      "detail": "PayPal lure",
+      "weight": 1.2
+    },
+    {
+      "id": "rem-phish-apple",
+      "name": "Apple ID phish",
+      "family": "phishing",
+      "severity": "high",
+      "pattern": "apple id locked",
+      "detail": "Apple lure",
+      "weight": 1.2
+    },
+    {
+      "id": "rem-c2-discord",
+      "name": "Discord webhook exfil",
+      "family": "stealer",
+      "severity": "high",
+      "pattern": "discord.com/api/webhooks/",
+      "detail": "Webhook exfil",
+      "weight": 1.4
+    },
+    {
+      "id": "rem-c2-tg",
+      "name": "Telegram bot exfil",
+      "family": "stealer",
+      "severity": "high",
+      "pattern": "api.telegram.org/bot",
+      "detail": "TG bot exfil",
+      "weight": 1.4
+    },
+    {
+      "id": "rem-c2-ngrok",
+      "name": "Ngrok tunnel",
+      "family": "malware",
+      "severity": "high",
+      "pattern": "ngrok-free.app",
+      "detail": "Tunnel C2",
+      "weight": 1.2
+    },
+    {
+      "id": "rem-c2-cf",
+      "name": "Cloudflare tunnel",
+      "family": "malware",
+      "severity": "medium",
+      "pattern": "trycloudflare.com",
+      "detail": "Tunnel C2",
+      "weight": 1.1
+    },
+    {
+      "id": "rem-drop-curlsh",
+      "name": "Curl pipe shell",
+      "family": "dropper",
+      "severity": "critical",
+      "pattern": "curl -fsSL",
+      "detail": "Remote installer",
+      "weight": 1.4
+    },
+    {
+      "id": "rem-drop-wgetsh",
+      "name": "Wget pipe shell",
+      "family": "dropper",
+      "severity": "critical",
+      "pattern": "wget -qO-",
+      "detail": "Remote installer",
+      "weight": 1.4
+    },
+    {
+      "id": "rem-ps-enc",
+      "name": "PS encoded",
+      "family": "malware",
+      "severity": "high",
+      "pattern": "-EncodedCommand",
+      "detail": "Obfuscated PowerShell",
+      "weight": 1.3
+    },
+    {
+      "id": "rem-ps-iex",
+      "name": "PS IEX",
+      "family": "malware",
+      "severity": "high",
+      "pattern": "IEX (New-Object",
+      "detail": "PowerShell download cradle",
+      "weight": 1.4
+    },
+    {
+      "id": "rem-miner-stratum",
+      "name": "Stratum pool",
+      "family": "miner",
+      "severity": "critical",
+      "pattern": "stratum+tcp://",
+      "detail": "Mining pool",
+      "weight": 1.5
+    },
+    {
+      "id": "rem-miner-xmrig",
+      "name": "XMRig",
+      "family": "miner",
+      "severity": "critical",
+      "pattern": "xmrig",
+      "detail": "CPU miner binary/name",
+      "weight": 1.3
+    },
+    {
+      "id": "rem-ransom-note",
+      "name": "Ransom note",
+      "family": "ransomware",
+      "severity": "critical",
+      "pattern": "your files have been encrypted",
+      "detail": "Ransom note",
+      "weight": 1.5
+    },
+    {
+      "id": "rem-ransom-btc",
+      "name": "Ransom BTC",
+      "family": "ransomware",
+      "severity": "critical",
+      "pattern": "bitcoin payment required",
+      "detail": "Ransom payment",
+      "weight": 1.4
+    },
+    {
+      "id": "rem-apk-access",
+      "name": "A11y malware",
+      "family": "malware",
+      "severity": "high",
+      "pattern": "BIND_ACCESSIBILITY_SERVICE",
+      "detail": "Accessibility abuse",
+      "weight": 0.8
+    },
+    {
+      "id": "rem-apk-admin",
+      "name": "Device admin",
+      "family": "malware",
+      "severity": "high",
+      "pattern": "BIND_DEVICE_ADMIN",
+      "detail": "Admin abuse",
+      "weight": 0.8
+    },
+    {
+      "id": "rem-apk-install",
+      "name": "Request install",
+      "family": "dropper",
+      "severity": "high",
+      "pattern": "REQUEST_INSTALL_PACKAGES",
+      "detail": "Sideload",
+      "weight": 0.8
+    },
+    {
+      "id": "rem-js-eval-atob",
+      "name": "JS eval atob",
+      "family": "malware",
+      "severity": "high",
+      "pattern": "eval(atob(",
+      "detail": "Obfuscated JS",
+      "weight": 1.4
+    },
+    {
+      "id": "rem-js-fromchar",
+      "name": "JS fromCharCode chain",
+      "family": "malware",
+      "severity": "medium",
+      "pattern": "String.fromCharCode",
+      "detail": "JS obfuscation",
+      "weight": 0.7
+    },
+    {
+      "id": "rem-pdf-openaction",
+      "name": "PDF OpenAction",
+      "family": "malware",
+      "severity": "medium",
+      "pattern": "/OpenAction",
+      "detail": "PDF auto action",
+      "weight": 0.9
+    },
+    {
+      "id": "rem-macro-autoopen",
+      "name": "Office AutoOpen",
+      "family": "malware",
+      "severity": "high",
+      "pattern": "Sub AutoOpen",
+      "detail": "Macro auto exec",
+      "weight": 1.3
+    },
+    {
+      "id": "rem-macro-docopen",
+      "name": "Doc Open macro",
+      "family": "malware",
+      "severity": "high",
+      "pattern": "Document_Open",
+      "detail": "Macro auto exec",
+      "weight": 1.3
+    },
+    {
+      "id": "rem-android-su",
+      "name": "su binary path",
+      "family": "tooling",
+      "severity": "low",
+      "pattern": "/system/xbin/su",
+      "detail": "Root binary",
+      "weight": 0.5
+    },
+    {
+      "id": "rem-frida",
+      "name": "Frida",
+      "family": "tooling",
+      "severity": "medium",
+      "pattern": "frida-agent",
+      "detail": "Instrumentation",
+      "weight": 1.0
+    },
+    {
+      "id": "rem-metasploit",
+      "name": "Metasploit",
+      "family": "malware",
+      "severity": "critical",
+      "pattern": "metasploit",
+      "detail": "Offensive framework",
+      "weight": 1.2
+    },
+    {
+      "id": "rem-meterpreter",
+      "name": "Meterpreter",
+      "family": "malware",
+      "severity": "critical",
+      "pattern": "meterpreter",
+      "detail": "C2 payload",
+      "weight": 1.4
+    },
+    {
+      "id": "rem-stage2",
+      "name": "Stage2 URL key",
+      "family": "dropper",
+      "severity": "high",
+      "pattern": "stage2_url",
+      "detail": "Config key",
+      "weight": 1.1
+    },
+    {
+      "id": "rem-exfil",
+      "name": "Exfil endpoint",
+      "family": "stealer",
+      "severity": "high",
+      "pattern": "exfil_endpoint",
+      "detail": "Config key",
+      "weight": 1.1
+    },
+    {
+      "id": "rem-bindshell",
+      "name": "Bind shell",
+      "family": "malware",
+      "severity": "critical",
+      "pattern": "bind_shell",
+      "detail": "Shell marker",
+      "weight": 1.3
+    },
+    {
+      "id": "rem-revshell",
+      "name": "Reverse shell",
+      "family": "malware",
+      "severity": "critical",
+      "pattern": "reverse_shell",
+      "detail": "Shell marker",
+      "weight": 1.3
+    },
+    {
+      "id": "rem-sms-forward",
+      "name": "SMS forward",
+      "family": "stealer",
+      "severity": "high",
+      "pattern": "sms forward",
+      "detail": "Forwarder",
+      "weight": 1.1
+    },
+    {
+      "id": "rem-keylog",
+      "name": "Keylog",
+      "family": "spyware",
+      "severity": "high",
+      "pattern": "keylogger",
+      "detail": "Keylog string",
+      "weight": 1.1
+    },
+    {
+      "id": "rem-overlay",
+      "name": "Fake login overlay",
+      "family": "malware",
+      "severity": "high",
+      "pattern": "fake login overlay",
+      "detail": "Banking overlay",
+      "weight": 1.2
+    },
+    {
+      "id": "rem-ussd",
+      "name": "USSD abuse",
+      "family": "malware",
+      "severity": "high",
+      "pattern": "callUssd",
+      "detail": "USSD API",
+      "weight": 1.0
+    },
+    {
+      "id": "rem-clipboard",
+      "name": "Clipboard steal",
+      "family": "stealer",
+      "severity": "medium",
+      "pattern": "clipboard manager",
+      "detail": "Clipboard access pattern",
+      "weight": 0.6
+    },
+    {
+      "id": "rem-accessibility-txt",
+      "name": "A11y service text",
+      "family": "malware",
+      "severity": "medium",
+      "pattern": "accessibility service is required",
+      "detail": "Social enable a11y",
+      "weight": 1.0
+    },
+    {
+      "id": "rem-device-admin-txt",
+      "name": "Admin activate text",
+      "family": "malware",
+      "severity": "medium",
+      "pattern": "activate device admin",
+      "detail": "Social enable admin",
+      "weight": 1.0
+    },
+    {
+      "id": "rem-apk-hidden",
+      "name": "Hidden APK name",
+      "family": "dropper",
+      "severity": "medium",
+      "pattern": "update.apk",
+      "detail": "Generic dropper name",
+      "weight": 0.7
+    },
+    {
+      "id": "rem-payload-apk",
+      "name": "payload.apk",
+      "family": "dropper",
+      "severity": "high",
+      "pattern": "payload.apk",
+      "detail": "Dropper naming",
+      "weight": 1.1
+    },
+    {
+      "id": "rem-base64-long",
+      "name": "base64_decode",
+      "family": "malware",
+      "severity": "medium",
+      "pattern": "base64_decode(",
+      "detail": "PHP/obfuscation",
+      "weight": 0.8
+    },
+    {
+      "id": "rem-shell-php",
+      "name": "PHP shell",
+      "family": "malware",
+      "severity": "high",
+      "pattern": "<?php system(",
+      "detail": "Web shell",
+      "weight": 1.4
+    },
+    {
+      "id": "rem-eval-php",
+      "name": "PHP eval",
+      "family": "malware",
+      "severity": "high",
+      "pattern": "<?php eval(",
+      "detail": "Web shell",
+      "weight": 1.4
+    },
+    {
+      "id": "rem-tinyurl",
+      "name": "TinyURL lure",
+      "family": "phishing",
+      "severity": "medium",
+      "pattern": "https://tinyurl.com/",
+      "detail": "Short link",
+      "weight": 0.6
+    },
+    {
+      "id": "rem-bitly",
+      "name": "Bitly lure",
+      "family": "phishing",
+      "severity": "medium",
+      "pattern": "https://bit.ly/",
+      "detail": "Short link",
+      "weight": 0.6
+    }
+  ],
+  "notes": "NSCB remote definition channel \u2014 weight used for confidence scoring"
+}

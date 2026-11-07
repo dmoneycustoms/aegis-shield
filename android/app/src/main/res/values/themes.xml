@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Aegis" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:statusBarColor">#030302</item>
+        <item name="android:navigationBarColor">#030302</item>
+        <item name="android:windowBackground">#030302</item>
+        <item name="colorAccent">#F0A202</item>
+        <item name="android:textColor">#F7F2E6</item>
+    </style>
+</resources>

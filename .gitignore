@@ -1,0 +1,21 @@
+# Secrets — never commit
+*.keystore
+*.jks
+*.p12
+**/local.properties
+**/keystore.properties
+*.pem
+*.key
+
+# Build
+**/build/
+**/.gradle/
+**/.idea/
+*.apk
+*.aab
+*.dex
+*.class
+
+# OS
+.DS_Store
+Thumbs.db
